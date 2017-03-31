@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Sample Project</title>
+        <!-- data-main attribute tells require.js to load
+             scripts/main.js after require.js loads. -->
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+        <script type="txt/javascript" src="scripts/helper/w2ui-1.5.rc1/w2ui-1.5.rc1.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/editor.css">
+        <link rel="stylesheet" type="text/css" href="scripts/helper/w2ui-1.5.rc1/w2ui-1.5.rc1.css">
+        <!-- css: 
+            font-family: 'Space Mono', monospace;
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-family: 'Aref Ruqaa', serif;
+            font-family: 'Indie Flower', cursive;
+        -->
+        <!--link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Indie+Flower|Open+Sans+Condensed:300|Space+Mono" rel="stylesheet" -->
+    </head>
+    <body>
+        <h1>My Sample Project</h1>
+        <div id="sidebar">
+            <div class="sidebar__action js-sidebar-add-text">
+                Add
+            </div>
+        </div>
+        <div class="editor js-editor">
+            <div class="editor__panel js-panel-add-text">
+                
+            </div>
+            <div  class="editor__canvas">
+                <canvas id="canvas"></canvas>
+            </div>
+                
+            <div class="editor__canvas-control js-canvas-control">
+                
+            </div>
+        </div>
+        <script id="template" type="x-tmpl-mustache">
+            <div class="editor__text js-editor-text" data-id-button="{{current}}">
+                Text {{current}} <img class="editor__text__delete js-delete-text" src="./img/delete.png" />
+            </div>
+        </script>
+        <script id="textModification" type="x-tmpl-mustache">
+            <div class="editor__canvas-control__title js-editor-text">
+                Text {{current}}
+            </div>
+    
+            <div class="editor__canvas-control__polices">
+                <div class="editor__canvas-control__police">
+                    <input type="radio" id="police-6" name="police" class="js-police" value="Times New Roman"/>
+                    <label for="police-6" class="police police-6">Times New Roman</label>
+                </div>
+                <div class="editor__canvas-control__police">
+                    <input type="radio" id="police-5" name="police" class="js-police" value="Arial"/>
+                    <label for="police-5" class="police police-5">Arial</label>
+                </div>
+                <div class="editor__canvas-control__police">
+                    <input type="radio" id="police-1" name="police" class="js-police" value="Aref Ruqaa"/>
+                    <label for="police-1" class="police police-1">Aref Ruqaa</label>
+                </div>
+                <div class="editor__canvas-control__police">
+                    <input type="radio" id="police-2" name="police" class="js-police" value="Indie Flower"/>
+                    <label for="police-2" class="police police-2">Indie Flower</label>
+                </div>
+                <div class="editor__canvas-control__police">
+                    <input type="radio" id="police-3" name="police" class="js-police" value="Open Sans Condensed"/>
+                    <label for="police-3" class="police police-3">Open Sans Condensed</label>
+                </div>
+                <div class="editor__canvas-control__police">
+                    <input type="radio" id="police-4" name="police" class="js-police" value="Space Mono"/>
+                    <label for="police-4" class="police police-4">Space Mono</label>
+                </div>
+                <input type="hidden" value="{{current}}" class="js-text-selected" />
+            </div>
+            <select id="font-size" class="js-font-size">
+                <option value="12">12px</option>
+                <option value="14">14px</option>
+                <option value="16">16px</option>
+                <option value="18">18px</option>
+                <option value="20">20px</option>
+                <option value="22">22px</option>
+            </select>
+            <!--
+            <select id="font" data-id-text="{{current}}">
+                <option  value="Space Mono">font-family: 'Space Mono', monospace;</option>
+                <option  value="Open Sans Condensed">font-family: 'Open Sans Condensed', sans-serif;</option>
+                <option  value="Indie Flower">font-family: 'Aref Ruqaa', serif;</option>
+            </select>
+            -->
+        </script>
+  
+    </body>
+</html>

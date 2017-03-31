@@ -1,0 +1,9 @@
+.sidebar {
+  display: block;
+  width: 200px;
+  height: 30px;
+  font-size: 0; }
+  .sidebar .sidebar__action {
+    display: block;
+    font-size: 12px;
+    font-height: 15px; }
